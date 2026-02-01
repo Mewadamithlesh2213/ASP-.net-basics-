@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@{
+    // ViewData Use Krne pr hame explicitly TypeCast krna pdta hai 
+        // Iske jagah New Version me ViewBag Use kiya jata hai 
+    int price = Convert.ToInt32(ViewData["Prod_Price"]);
+    int qty = Convert.ToInt32(ViewData["Prod_Qty"]);
+    int total = price * qty;
+}
+<div class="text-center">
+    <h3>Product Name : @ViewData["ProdName"]</h3>
+    <h3>Product Id : @ViewData["Prod_ID"]</h3>
+    <h3>Product Price : @ViewData["Prod_Price"]</h3>
+    <h3>Product Qty : @ViewData["Prod_Qty"]</h3>
+    <h3>Stock is : @total </h3>
+    <div> </div>
+   </div>
+    @{
+        // Yahh Difference hai ViewData or ViewBag me Bina 
+        // Explicitly TypeCast nahi krna pada
+    }
+   <div>
+       
+    <h3> @ViewBag.ProdName</h3> 
+    <h3> @ViewBag.ProdId</h3>
+    <h3> @ViewBag.Price</h3>
+    <h3> @ViewBag.Prod_Qty</h3>
+    <h3> Total : @(ViewBag.price  * ViewBag.Prod_Qty)</h3>
+   </div>
