@@ -1,0 +1,12 @@
+﻿@model Passing_Data_From_Model_To_View.Models.Product;
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1> Product Details</h1>
+    <h3>ProDuct_Id : @Model.ProdId</h3>
+    <h3>ProDuct_Name : @Model.ProdName</h3>
+    <h3>Product_Price : @Model.ProdPrice</h3>
+    <h3>ProDuct_Qty : @Model.ProdQty</h3>
+</div>

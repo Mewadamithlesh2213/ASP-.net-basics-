@@ -1,0 +1,32 @@
+﻿@model IEnumerable<MultiModel_Passing_By_Using_List.Models.Student>;
+
+<h1>Student DeTails Using List Example for Many Obect Passing</h1>
+
+<hr />
+
+<div class="container mt-5">
+    <div class="row bg-dark text-white py-3 mb-2 rounded shadow-sm text-center">
+        <div class="col-3"><strong>Student ID</strong></div>
+        <div class="col-3"><strong>Name</strong></div>
+        <div class="col-3"><strong>Gender</strong></div>
+        <div class="col-3"><strong>Age</strong></div>
+    </div>
+
+    @foreach (var item in Model)
+    {
+        <div class="row border-bottom py-3 align-items-center text-center bg-light mb-1 shadow-sm rounded">
+            <div class="col-3">
+                <span class="badge bg-primary text-wrap">@item.Id</span>
+            </div>
+            <div class="col-3 text-capitalize">
+                <b>@item.Name</b>
+            </div>
+            <div class="col-3">
+                <span class="text-muted">@item.Gender</span>
+            </div>
+            <div class="col-3">
+                <span class="fw-bold">@item.Age yrs</span>
+            </div>
+        </div>
+    }
+</div>
